@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * <p>Created by Damon.Q on 2017/2/16.
+ * <p>Created by qct on 2017/2/16.
  */
 public class AccessFilter extends ZuulFilter {
 

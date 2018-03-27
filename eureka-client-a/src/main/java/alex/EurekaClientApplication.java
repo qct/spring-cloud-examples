@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * <p>Created by Damon.Q on 2017/2/13.
+ * <p>Created by qct on 2017/2/13.
  */
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -43,9 +43,8 @@ class ServiceInstanceRestController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-        ServiceInstance instance = discoveryClient.getLocalServiceInstance();
-        logger.info("/add, host: {}, serviceId: {}, result: {}", instance.getHost(),
-            instance.getServiceId(), a + b);
-        return a+b;
+        List<String> services = discoveryClient.getServices();
+        logger.info("/add, services: {}, result: {}", services, a + b);
+        return a + b;
     }
 }

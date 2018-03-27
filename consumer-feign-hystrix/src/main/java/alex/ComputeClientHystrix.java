@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * <p>Created by Damon.Q on 2017/2/16.
+ * <p>Created by qct on 2017/2/16.
  */
 @Component
 public class ComputeClientHystrix implements ComputeClient {

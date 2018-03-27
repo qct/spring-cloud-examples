@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 /**
- * <p>Created by Damon.Q on 2017/2/24.
+ * <p>Created by qct on 2017/2/24.
  */
 @Component
 public class TestListener implements ApplicationListener<ApplicationEvent> {
