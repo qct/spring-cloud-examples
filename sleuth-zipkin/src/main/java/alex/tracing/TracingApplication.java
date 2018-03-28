@@ -1,4 +1,4 @@
-package alex;
+package alex.tracing;
 
 import java.util.List;
 import org.slf4j.Logger;
@@ -9,23 +9,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * <p>Created by qct on 2017/2/13.
- */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaClientApplication {
+public class TracingApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(TracingApplication.class, args);
     }
 }
 
