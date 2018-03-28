@@ -1,10 +1,9 @@
-package alex;
+package alex.declarative.client.circuit.breaker;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * <p>Created by qct on 2017/2/15.
@@ -13,11 +12,10 @@ import org.springframework.web.client.RestTemplate;
 public class ConsumerController {
 
     @Autowired
-    RestTemplate restTemplate;
+    ComputeClient computeClient;
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String add() {
-        return restTemplate.getForEntity("http://A-BOOTIFUL-CLIENT/add?a=1&b=2", String.class)
-            .getBody();
+    public Integer add() {
+        return computeClient.add(10, 20);
     }
 }

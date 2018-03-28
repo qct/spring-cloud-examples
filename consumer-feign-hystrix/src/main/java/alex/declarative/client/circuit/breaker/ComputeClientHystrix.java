@@ -1,4 +1,4 @@
-package alex;
+package alex.declarative.client.circuit.breaker;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;

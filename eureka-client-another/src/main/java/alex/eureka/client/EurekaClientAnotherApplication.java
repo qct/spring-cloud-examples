@@ -1,4 +1,4 @@
-package alex;
+package alex.eureka.client;
 
 import java.util.List;
 import org.slf4j.Logger;
@@ -9,8 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,10 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaClientApplication {
+public class EurekaClientAnotherApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(EurekaClientAnotherApplication.class, args);
     }
 }
 
@@ -47,6 +45,6 @@ class ServiceInstanceRestController {
     public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
         List<String> services = discoveryClient.getServices();
         logger.info("/add, services: {}, result: {}", services, a + b);
-        return a+b;
+        return a + b;
     }
 }

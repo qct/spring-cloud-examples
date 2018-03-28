@@ -1,4 +1,4 @@
-package alex;
+package alex.eureka.client;
 
 import java.util.List;
 import org.slf4j.Logger;
@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-public class EurekaClientAnotherApplication {
+public class EurekaClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientAnotherApplication.class, args);
+        SpringApplication.run(EurekaClientApplication.class, args);
     }
 }
 
@@ -45,6 +45,6 @@ class ServiceInstanceRestController {
     public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
         List<String> services = discoveryClient.getServices();
         logger.info("/add, services: {}, result: {}", services, a + b);
-        return a + b;
+        return a+b;
     }
 }

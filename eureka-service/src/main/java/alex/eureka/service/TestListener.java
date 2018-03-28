@@ -1,4 +1,4 @@
-package alex;
+package alex.eureka.service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import org.slf4j.Logger;
